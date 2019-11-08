@@ -6,14 +6,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String EXTRA_MESSAGE = "";
-    private static final String LOG_TAG = "";
+    public static final String EXTRA_MESSAGE = "extra_message_key";
+    private static final String LOG_TAG = MainActivity.class.getSimpleName();
     private int mCount = 0;
     private TextView mShowCount;
 
@@ -22,11 +19,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mShowCount = (TextView) findViewById(R.id.show_count);
-        Log.i("LOG_TAG", " La deuxième activité est ajoutée en tant que classe Java, le fichier de présentation (layout) XML est créé et le fichier AndroidManifest.xml est modifié pour déclarer une deuxième activité. ");
-        Log.i("LOG_TAG", " Le bouton Back (Précédent) ne fonctionne plus dans la deuxième activité pour renvoyer l'utilisateur à l'activité principale. ");
-        Log.i("LOG_TAG","intention explicite utilise la méthode: new Intent(Context context, Class<?> class)");
-        Log.i("LOG_TAG","on ajoute la valeur actuelle du comptage à l'intention: Comme extra d'intention (Intent)");
-        Log.i("LOG_TAG",  " Obtenez l'intention (Intent) avec laquelle l'activité a été lancée.");
+        Log.i(LOG_TAG, " La deuxième activité est ajoutée en tant que classe Java, le fichier de présentation (layout) XML est créé et le fichier AndroidManifest.xml est modifié pour déclarer une deuxième activité. ");
+        Log.i(LOG_TAG, " Le bouton Back (Précédent) ne fonctionne plus dans la deuxième activité pour renvoyer l'utilisateur à l'activité principale. ");
+        Log.i(LOG_TAG,"intention explicite utilise la méthode: new Intent(Context context, Class<?> class)");
+        Log.i(LOG_TAG,"on ajoute la valeur actuelle du comptage à l'intention: Comme extra d'intention (Intent)");
+        Log.i(LOG_TAG,  " Obtenez l'intention (Intent) avec laquelle l'activité a été lancée.");
 
 
 
